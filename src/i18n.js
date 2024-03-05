@@ -54,6 +54,8 @@ const resources = {
       faq_title: "Frequently Asked",
       faq_subtitle: "You will find answers that might be of interest to you.",
       masters: "Masters",
+      toast_title:"No department selected",
+      toast_text:"Please select department from settings",
       // //constants.js --> offices
       // // offices: "Offices",
       // // liaison_office: "Liason Office",
@@ -106,7 +108,9 @@ const resources = {
       freshmen_guides: "Πρωτοετείς",
       faq_title: "Συχνές Ερωτήσεις",
       faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν.",
-      masters: "Μεταπτυχιακά"
+      masters: "Μεταπτυχιακά",
+      toast_title:"Δεν έχει επιλεγεί τμήμα",
+      toast_text:"Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
       //constants.js
       // offices: "Γραφεία",
       // liaison_office: "Γραφείο Διασύνδεσης",
