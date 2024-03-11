@@ -60,10 +60,13 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
 // import { EmailIcon } from "@chakra-ui/icons";
+//importing pinch zoom pan
+import { PinchView } from 'react-pinch-zoom-pan';
 
 export default function ProfCard({ prof }) {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box
       w="100%"
@@ -122,14 +125,14 @@ export default function ProfCard({ prof }) {
             </Text>
 
             <Text as="span" fontWeight="bold">
-            {i18n.t("tilefono")}&nbsp;
+              {i18n.t("tilefono")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.tel}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
-            {i18n.t("email")}&nbsp;
+              {i18n.t("email")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.email}
               </Text>
@@ -146,12 +149,14 @@ export default function ProfCard({ prof }) {
                 {prof.building}
               </Text>
             </Text>
-            <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
+
+            <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} size={"xl"}>
               <ModalOverlay backdropFilter="blur(10px)" />
               <ModalContent
                 bgColor={useColorModeValue("#f3f3f3", "black")}
                 width={{ md: "500px", base: "300px" }}
                 height={{ md: "500px", base: "300px" }}
+                scrollBehavior="inside"
               >
                 <ModalHeader>{i18n.t("mprostiniOpsi")}</ModalHeader>
                 <ModalCloseButton />
@@ -160,8 +165,9 @@ export default function ProfCard({ prof }) {
                 </ModalBody>
               </ModalContent>
             </Modal>
+
             <Text as="span" fontWeight="bold">
-            {t("grafeio")}&nbsp;
+              {t("grafeio")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.office}
               </Text>
@@ -180,7 +186,7 @@ export default function ProfCard({ prof }) {
               }}
             >
               <span>
-              {t("epikoinonisteMe")} <br /> {t("tonTinKathigiti")}
+                {t("epikoinonisteMe")} <br /> {t("tonTinKathigiti")}
               </span>
               <Box w={{ sm: "16px", lg: "18px" }}>
                 <svg
