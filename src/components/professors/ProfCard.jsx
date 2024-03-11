@@ -61,7 +61,7 @@ import {
 import { useTranslation } from 'react-i18next';
 // import { EmailIcon } from "@chakra-ui/icons";
 //importing pinch zoom pan
-import { PinchView } from 'react-pinch-zoom-pan';
+// import { PinchView } from 'react-pinch-zoom-pan';
 
 export default function ProfCard({ prof }) {
   const { t, i18n } = useTranslation();
